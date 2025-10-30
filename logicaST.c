@@ -117,7 +117,7 @@ int opcao;
   printf("3. PIB \n");
   printf("4. Número de pontos turísticos \n");
   printf("5. Densidade demográfica \n");
-  scanf("%d",&opcao);
+  scanf("%d",&opcao);jdjd
 
 
   switch (opcao){
