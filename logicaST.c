@@ -117,24 +117,25 @@ int opcao;
   printf("3. PIB \n");
   printf("4. Número de pontos turísticos \n");
   printf("5. Densidade demográfica \n");
-  scanf("%d",&opcao);jdjd
-
+  scanf("%d",&opcao);
+  printf("\n");
 
   switch (opcao){
    case 1:
-   printf("%s e %s, cidade1, cidade2)
-   printf("Jogador: População -\n ");
+   printf("%s e %s\n", nome1, nome2);
+   printf("Jogador 1: População-%d - Jogador 2: População-%d\n", populacao1, populacao2);
    if(populacao1 > populacao2) {
    printf("População da carta 1 Venceu!\n ");
   } else if(populacao2 > populacao1) {
-    printf("População da carta 2 Venceu!\n") ; 
+    printf("População da carta 2 Venceu!\n"); 
   } else {
     printf("Empatou!\n");
   }
   break;
 
    case 2:
-   printf("Jogador: Área -\n");
+   printf("%s e %s\n", nome1, nome2);
+   printf("Jogador 1: Área-%.2f - Jogador 2: População-%.2f\n", area1, area2);
    if(area1 > area2) {
     printf("Área da carta 1 Venceu!\n ");
   } else if(area2 > area1) {
@@ -146,7 +147,8 @@ int opcao;
 
 
    case 3:
-   printf("Jogador: PIB -\n");
+   printf("%s e %s\n", nome1, nome2);
+   printf("Jogador 1: PIB-%.2f bilhões de reais - Jogador 2: PIB-%.2f bilhões de reais\n", pib1, pib2);
    if(pib1 > pib2) {
    printf("Pib da carta 1 Venceu!\n "); 
   } else if (pib2 > pib1) {
@@ -157,7 +159,8 @@ int opcao;
    break;
 
    case 4:
-   printf("Jogador: Número de pontos turísticos -\n");
+   printf("%s e %s\n", nome1, nome2);
+   printf("Jogador 1: Pontos Turísticos-%d - Jogador 2: Pontos Turísticos-%d\n", ponto1, ponto2);
    if(ponto1 > ponto2) {
     printf("Pontos da carta 1 Venceu!\n ");
   } else if(ponto2 > ponto1) {
@@ -168,7 +171,8 @@ int opcao;
    break;
 
    case 5:
-   printf("Jogador: Densidade demográfica -\n");
+   printf("%s e %s\n", nome1, nome2);
+   printf("Jogador 1: Densidade-%.2f - Jogador 2: Densidade-%.2f\n", densidade1, densidade2);
    if(densidade1 < densidade2) {
     printf("Densidade da carta 1 Venceu!\n ");
   } else if (densidade2 < densidade1) {
