@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
+int opcao;
 
   char estado1;
   char codigo1[10];
@@ -108,49 +111,78 @@ int main(){
   printf("--Início de Batalha !--\n");
   printf("\n");
 
-  if(populacao1 > populacao2) {
-    printf("População da carta 1 Venceu!\n ");
-  } else {
+  printf("Escolha uma opção: \n");
+  printf("1. População \n");
+  printf("2. Área \n");
+  printf("3. PIB \n");
+  printf("4. Número de pontos turísticos \n");
+  printf("5. Densidade demográfica \n");
+  scanf("%d",&opcao);
+
+
+  switch (opcao){
+   case 1:
+   printf("%s e %s, cidade1, cidade2)
+   printf("Jogador: População -\n ");
+   if(populacao1 > populacao2) {
+   printf("População da carta 1 Venceu!\n ");
+  } else if(populacao2 > populacao1) {
     printf("População da carta 2 Venceu!\n") ; 
+  } else {
+    printf("Empatou!\n");
   }
+  break;
 
-  if(area1 > area2) {
+   case 2:
+   printf("Jogador: Área -\n");
+   if(area1 > area2) {
     printf("Área da carta 1 Venceu!\n ");
-  } else {
+  } else if(area2 > area1) {
     printf("Área de carta 2 Venceu!\n ");
+  } else {
+    printf ("Empatou!\n");
   }
+   break;
 
-  if(pib1 > pib2) {
+
+   case 3:
+   printf("Jogador: PIB -\n");
+   if(pib1 > pib2) {
    printf("Pib da carta 1 Venceu!\n "); 
-  } else {
+  } else if (pib2 > pib1) {
     printf("Pib da carta 2 Venceu!\n ");
+  } else {
+    printf("Empatou!\n");
   }
+   break;
 
-  if(ponto1 > ponto2) {
+   case 4:
+   printf("Jogador: Número de pontos turísticos -\n");
+   if(ponto1 > ponto2) {
     printf("Pontos da carta 1 Venceu!\n ");
-  } else {
+  } else if(ponto2 > ponto1) {
     printf("Ponto da carta 2 Venceu!\n ");
+    } else {
+      printf("Empatou\n");
   }
+   break;
 
-  if(densidade1 < densidade2) {
+   case 5:
+   printf("Jogador: Densidade demográfica -\n");
+   if(densidade1 < densidade2) {
     printf("Densidade da carta 1 Venceu!\n ");
-  } else {
+  } else if (densidade2 < densidade1) {
     printf("Densidade da carta 2 Venceu!\n ");
-  }
-
-  if(carpita1 > carpita2) {
-    printf("Pib per capita da carta 1 Venceu!\n ");
   } else {
-    printf("Pib per capita da carta 2 Venceu!\n ");
+   printf("Empatou!\n");
+  } 
+   break;
+  
+   default:
+   printf("opção invalida -\n");
+   break;
   }
-
-  if(poder1 > poder2) {
-    printf("O Super poder da carta 1 Venceu!\n ");
-  } else {
-    printf("O super poder da carta 2 Venceu!\n");
-  }
-
-
+  
   return 0;
 
   }
