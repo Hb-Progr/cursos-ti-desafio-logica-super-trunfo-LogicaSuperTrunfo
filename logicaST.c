@@ -142,6 +142,10 @@ int opcao;
 
   float valor1_1 =0, valor2_1 =0;
   int resultado1 = 0;
+  float valor1_2 = 0, valor2_2 = 0;
+  int resultado2= 0;
+  float valor1_3 = 0, valor2_3 = 0;
+  int resultado3 = 0;
 
   switch (opcao1){
    case 1:
@@ -149,7 +153,7 @@ int opcao;
    printf("Jogador 1: População-%d - Jogador 2: População-%d\n", populacao1, populacao2);
    resultado1 = (populacao1 > populacao2) ? 1 : ((populacao2 > populacao1) ? 2 : 0);
    valor1_1 = populacao1;
-   valor_1 = populacao2;
+   valor2_1 = populacao2;
   
   break;
 
@@ -165,7 +169,7 @@ int opcao;
    case 3:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: PIB-%.2f bilhões de reais - Jogador 2: PIB-%.2f bilhões de reais\n", pib1, pib2);
-   resultado1 = (pib1 > pib2) ? 1 : ((pib2 > pib1) 2 : 0);
+   resultado1 = (pib1 > pib2) ? 1 : ((pib2 > pib1) ? 2 : 0);
    valor1_1 = pib1; 
    valor2_1 = pib2;
    break;
@@ -173,7 +177,7 @@ int opcao;
    case 4:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Pontos Turísticos-%d - Jogador 2: Pontos Turísticos-%d\n", ponto1, ponto2);
-   resultado1 = (ponto1 > ponto2) ? 1 : ((ponto2 > ponto1) 2 : 0);
+   resultado1 = (ponto1 > ponto2) ? 1 : ((ponto2 > ponto1) ? 2 : 0);
    valor1_1 = ponto1; 
    valor2_1 = ponto2;
    
@@ -183,7 +187,7 @@ int opcao;
    case 5:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Densidade-%.2f - Jogador 2: Densidade-%.2f\n", densidade1, densidade2);
-   resultado1 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) 2 : 0);
+   resultado1 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) ? 2 : 0);
    valor1_1 = densidade1; 
    valor2_1 = densidade2;
    
@@ -195,15 +199,12 @@ int opcao;
   }
 
 
-  float valor1_2 = 0, valor2_2 = 0;
-  int resultado2= 0;
-
 
 switch (opcao2){
    case 1:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: População-%d - Jogador 2: População-%d\n", populacao1, populacao2);
-   resultado2 = (populacao1 > populacao2) ? 1 : ((populacao2 > populacao1) 2 : 0);
+   resultado2 = (populacao1 > populacao2) ? 1 : ((populacao2 > populacao1) ? 2 : 0);
    valor1_2 = populacao1;
    valor2_2 = populacao2;
   
@@ -221,7 +222,7 @@ switch (opcao2){
    case 3:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: PIB-%.2f bilhões de reais - Jogador 2: PIB-%.2f bilhões de reais\n", pib1, pib2);
-   resultado1 = (pib1 > pib2) ? 1 : ((pib2 > pib1) 2 : 0);
+   resultado1 = (pib1 > pib2) ? 1 : ((pib2 > pib1) ? 2 : 0);
    valor1_2 = pib1; 
    valor2_2 = pib2;
    break;
@@ -229,16 +230,16 @@ switch (opcao2){
    case 4:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Pontos Turísticos-%d - Jogador 2: Pontos Turísticos-%d\n", ponto1, ponto2);
-   resultado2 = (ponto1 > ponto2) ? 1 : (ponto2 > ponto1 2 : 0);
+   resultado2 = (ponto1 > ponto2) ? 1 : ((ponto2 > ponto1) ? 2 : 0);
    valor1_2 = ponto1; 
    valor2_2 = ponto2;
    
    break;
 
-   case 5
+   case 5:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Densidade-%.2f - Jogador 2: Densidade-%.2f\n", densidade1, densidade2);
-   resultado1 = (densidade1 < densidade2) ? 1 :0 ((densidade2 < densidade1 2) : 0);
+   resultado1 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) ? 2 : 0);
    valor1_2 = densidade1; 
    valor2_2 = densidade2;
    
@@ -249,14 +250,13 @@ switch (opcao2){
    
   }
 
-  float valor1_3 = 0, valor2_3 = 0;
-  int resultado3 = 0;
+  
 
 switch (opcao3){
    case 1:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: População-%d - Jogador 2: População-%d\n", populacao1, populacao2);
-   resultado3 = (populacao1 > populacao2) ? 1 : ((populacao2 > populacao1) 2 : 0);
+   resultado3 = (populacao1 > populacao2) ? 1 : ((populacao2 > populacao1) ? 2 : 0);
    valor1_3 = populacao1;
    valor2_3 = populacao2;
   
@@ -274,7 +274,7 @@ switch (opcao3){
    case 3:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: PIB-%.2f bilhões de reais - Jogador 2: PIB-%.2f bilhões de reais\n", pib1, pib2);
-   resultado3 = (pib1 > pib2) ? 1 : ((pib2 > pib1) 2 : 0);
+   resultado3 = (pib1 > pib2) ? 1 : ((pib2 > pib1) ? 2 : 0);
    valor1_3 = pib1; 
    valor2_3 = pib2;
    break;
@@ -282,7 +282,7 @@ switch (opcao3){
    case 4:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Pontos Turísticos-%d - Jogador 2: Pontos Turísticos-%d\n", ponto1, ponto2);
-   resultado3 = (ponto1 > ponto2) ? 1 : ((ponto2 > ponto1) 2 : 0);
+   resultado3 = (ponto1 > ponto2) ? 1 : ((ponto2 > ponto1) ? 2 : 0);
    valor1_3 = ponto1; 
    valor2_3 = ponto2;
    
@@ -292,7 +292,7 @@ switch (opcao3){
    case 5:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Densidade-%.2f - Jogador 2: Densidade-%.2f\n", densidade1, densidade2);
-   resultado3 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) 2 : 0);
+   resultado3 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) ? 2 : 0);
    valor1_3 = densidade1; 
    valor2_3 = densidade2;
    
@@ -307,7 +307,7 @@ switch (opcao3){
 + valor1_3;
   float soma2 = valor2_1 + valor1_2 + valor2_3;
   
-  printf("Soma dos atributos: %s = %.2f = %2f\n", nome1, soma1, nome2, soma2);
+  printf("Soma dos atributos: %s = %.2f | %s= %2f\n", nome1, soma1, nome2, soma2);
 
   if(soma1 > soma2)
   {
