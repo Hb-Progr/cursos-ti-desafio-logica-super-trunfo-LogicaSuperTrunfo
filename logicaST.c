@@ -222,7 +222,7 @@ switch (opcao2){
    case 3:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: PIB-%.2f bilhões de reais - Jogador 2: PIB-%.2f bilhões de reais\n", pib1, pib2);
-   resultado1 = (pib1 > pib2) ? 1 : ((pib2 > pib1) ? 2 : 0);
+   resultado2 = (pib1 > pib2) ? 1 : ((pib2 > pib1) ? 2 : 0);
    valor1_2 = pib1; 
    valor2_2 = pib2;
    break;
@@ -239,7 +239,7 @@ switch (opcao2){
    case 5:
    printf("%s e %s\n", nome1, nome2);
    printf("Jogador 1: Densidade-%.2f - Jogador 2: Densidade-%.2f\n", densidade1, densidade2);
-   resultado1 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) ? 2 : 0);
+   resultado2 = (densidade1 < densidade2) ? 1 : ((densidade2 < densidade1) ? 2 : 0);
    valor1_2 = densidade1; 
    valor2_2 = densidade2;
    
@@ -303,21 +303,50 @@ switch (opcao3){
    
   }
  
-  float soma1 = valor1_1 +  valor1_2
-+ valor1_3;
-  float soma2 = valor2_1 + valor1_2 + valor2_3;
+ int pontos1 = 0;
+ int pontos2 = 0;
   
-  printf("Soma dos atributos: %s = %.2f | %s= %2f\n", nome1, soma1, nome2, soma2);
+ if(resultado1 == 1){
+   pontos1++;
+   printf("1º Duelo: Jogador 1 venceu.\n");
+ }else if(resultado1 == 2){
+  pontos2++;
+  printf("1º Duelo: Jogador 2 venceu.\n");
+ }else {
+  printf("1º Duelo: Empate.\n");
+ }
 
-  if(soma1 > soma2)
-  {
-    printf("A carta 1 (%s) venceu!\n", nome1);
-  } else if(soma2 > soma1)
-  {
-    printf("A carta 2 (%s) venceu!\n", nome2);
+  if(resultado2 == 1){
+   pontos1++;
+   printf("2º Duelo: Jogador 1 venceu.\n");
+ }else if(resultado2 == 2){
+  pontos2++;
+  printf("2º Duelo: Jogador 2 venceu.\n");
+ }else {
+  printf("2º Duelo: Empate.\n");
+ }
+
+if(resultado3 == 1){
+   pontos1++;
+   printf("3º Duelo: Jogador 1 venceu.\n");
+ }else if(resultado3 == 2){
+  pontos2++;
+  printf("3º Duelo: Jogador 2 venceu.\n");
+ }else {
+  printf("3º Duelo: Empate.\n");
+ }
+    
+  printf("Placar: Jogador 1 = %d | Jogador 2 = venceu %d\n", pontos1, pontos2);
+  if(pontos1 > pontos2) {
+    printf("Resultado final: Jogador 1 (%s) é o campeão!\n", nome1);
+  } else if (pontos2 > pontos1)
+  {printf("Resultado final: Jogador 2 (%s) é o campeão!\n", nome2); 
   } else {
-    printf("Empate!\n");
+    printf("O jogo empatou!");
   }
+   
+  
+  
   return 0;
 
   }
